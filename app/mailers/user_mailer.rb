@@ -5,9 +5,10 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome
-    @greeting = "Hi"
+  default from: 'decide.for.me.noreply@gmail.com'
 
-    mail to: "to@example.org"
+  def welcome_email(user)
+    @user = user
+    mail(to: @user.email, subject: 'Move with me confirmation email!')
   end
 end
