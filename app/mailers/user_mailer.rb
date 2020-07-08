@@ -5,10 +5,10 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  default from: 'decide.for.me.noreply@gmail.com'
+  default from: 'movewithmerionoreply@gmail.com'
 
-  def welcome_email(user)
-    @user = user
+  def welcome
+    @user = params[:user] # Instance variable => available in view
     mail(to: @user.email, subject: 'Move with me confirmation email!')
   end
 end
