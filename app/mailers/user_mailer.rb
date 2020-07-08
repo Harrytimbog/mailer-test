@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  default from: 'movewithmerionoreply@gmail.com'
+  default from: 'movewithmerio@gmail.com'
 
   def welcome
     @user = params[:user] # Instance variable => available in view
